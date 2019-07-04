@@ -3,10 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start"
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "react-native": "0.17.0",
-    "react-native-passcode-auth": "../.."
-  }
+    "react-native-passcode-auth": "../..",
+    "snyk": "^1.190.0"
+  },
+  "snyk": true
 }
